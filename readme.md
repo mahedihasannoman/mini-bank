@@ -1,6 +1,14 @@
 ## Minibank
 
-Minibank is a small home accounting solution to track record on various incomes and expenses. You can categorize your accounts and setup various payers and payees. There are eight type of report features are bundled with this app that allows you to monitor your overall statistics in a nice and intuitive way. The app is build with Laravel 4.2 and follows SOLID design principle. UI is done with bootstrap base free admin template. To install this app on your system, do the following thing.
+The MiniBank online system (MBS) is a small bank for personal and small business. The banking
+system enables customer to access their bank account and perform their everyday banking needs.
+MBS has many customers, and each customer has one or more accounts. The MBS use the Euro as
+currency. The smallest unit of the currency is the single Euro.
+When customer open an account, they provide an information pack which contain unique email id,
+personal code, and password information for login into the banking system. After that, Customers
+can view their account information, perform banking operations online, such as displaying the
+balance of an account or transferring money. The customers can also interact with the MBS to
+perform common transactions such as performing withdrawals, deposit and transferring money.
 
 1. Clone the repo.
 2. Install composer
