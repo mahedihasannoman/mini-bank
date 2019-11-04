@@ -22,7 +22,7 @@ class CreateTransactionsTable extends Migration
             $table->string('reference', 255)->nullable();
             $table->date('transaction_date');
             $table->text('description')->nullable();
-            $table->enum('type', ['deposit', 'transfer'])->default('deposit');
+            $table->enum('type', ['deposit', 'transfer', 'withdraw'])->default('deposit');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')

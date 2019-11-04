@@ -58,6 +58,7 @@ class TransactionRepository implements TransactionRepositoryInterface
     public function store(array $data)
     {
         return Transaction::create($data);
+
     }
 
 

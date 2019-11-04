@@ -74,6 +74,7 @@ class AccountController extends Controller
 
         $data['deposit'] = Transaction::where('account_id', $account_id)->where('type', 'deposit')->sum('amount');
         $data['transfer'] = Transaction::where('account_id', $account_id)->where('type', 'transfer')->sum('amount');
+        $data['withdraw'] = Transaction::where('account_id', $account_id)->where('type', 'withdraw')->sum('amount');
         $data['total_transactions'] = count($this->transactionRepository->getTransactionByAccountId($account_id));
         $data['transactions'] = $this->transactionRepository->getTransactionByAccountId($account_id);
 

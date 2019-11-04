@@ -38,6 +38,20 @@ class TransactionController extends Controller
         return view('admin.transaction.deposit', $data);
 
     }
+	
+	/**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function withdraw()
+    {
+
+        $data['activeMenu'] = 'create_account_withdraw';
+        $data['title'] = 'Withdraw money from your account';
+        return view('admin.transaction.withdraw', $data);
+
+    }
 
 
     /**
@@ -46,10 +60,28 @@ class TransactionController extends Controller
      */
     public function storeDeposit(TransactionRequest $request)
     {
+		
         $this->transactionRepository->store($request->all());
 
         $notification = array(
             'message' => 'Money has been deposited to your account',
+            'alertType' => 'success'
+        );
+        return redirect()->route('allAccount')->with($notification);
+
+    }
+	
+	/**
+     * @param TransactionRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function storeWithdraw(TransactionRequest $request)
+    {
+		
+        $this->transactionRepository->store($request->all());
+
+        $notification = array(
+            'message' => 'Money has been withdrawed from your account',
             'alertType' => 'success'
         );
         return redirect()->route('allAccount')->with($notification);

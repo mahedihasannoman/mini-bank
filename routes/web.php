@@ -41,7 +41,9 @@ Route::group(/**
 
     Route::prefix('transaction')->group(function () {
         Route::get('deposit', 'TransactionController@deposit')->name('deposit');
+		Route::get('withdraw', 'TransactionController@withdraw')->name('withdraw');
         Route::post('storeDeposit', 'TransactionController@storeDeposit')->name('storeDeposit');
+        Route::post('storeWithdraw', 'TransactionController@storeWithdraw')->name('storeWithdraw');
         Route::get('transferBalance', 'TransactionController@transferBalance')->name('transferBalance');
         Route::post('postTransferBalance', 'TransactionController@postTransferBalance')->name('postTransferBalance');
 

@@ -4,7 +4,7 @@
 
         <ul class="sidebar-menu" data-widget="tree">
             <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-            <li class="treeview @if($activeMenu =='create_account_deposit' || $activeMenu == 'create_balance_transfer') active @endif">
+            <li class="treeview @if($activeMenu =='create_account_deposit' || $activeMenu == 'create_balance_transfer' || $activeMenu == 'create_account_withdraw') active @endif">
                 <a href="#">
                     <i class="fa fa-money"></i>
                     <span>Transactions</span>
@@ -15,6 +15,10 @@
                 <ul class="treeview-menu">
                     <li class="@if($activeMenu =='create_account_deposit') active @endif">
                         <a href="{{route('deposit')}}"><i class="fa fa-circle-o"></i> Deposit</a></li>
+
+                        <li class="@if($activeMenu =='create_account_withdraw') active @endif">
+                        <a href="{{route('withdraw')}}"><i class="fa fa-circle-o"></i> Withdraw</a></li>
+
                     <li class="@if($activeMenu =='create_balance_transfer') active @endif"><a
                             href="{{route('transferBalance')}}"><i
                                 class="fa fa-circle-o"></i> Balance Transfer</a></li>

@@ -32,7 +32,7 @@
                                         <div class="col-sm-4 border-right">
                                             <div class="description-block">
                                                 <span class="description-text">Current Account Balance</span>
-                                                <h5 class="description-header text text-info"> €{{number_format(\App\Transaction::account($account_id)->opening_balance + $deposit - $transfer,'2','.','')}}</h5>
+                                                <h5 class="description-header text text-info"> €{{number_format(\App\Transaction::account($account_id)->opening_balance + $deposit - $transfer - $withdraw,'2','.','')}}</h5>
 
                                             </div>
                                         </div>
@@ -67,7 +67,8 @@
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Deposit</th>
-                                <th>Withdrad</th>
+                                <th>Transfered</th>
+                                <th>Withdraw</th>
 
 
                             </tr>
@@ -87,6 +88,11 @@
                                         <td><span> - </span></td>
                                     @endif
                                     @if($transaction->type =='transfer')
+                                        <td><span class="text text-danger">€{{$transaction->amount}}</span></td>
+                                    @else
+                                        <td><span> - </span></td>
+                                    @endif
+                                    @if($transaction->type =='withdraw')
                                         <td><span class="text text-danger">€{{$transaction->amount}}</span></td>
                                     @else
                                         <td><span> - </span></td>
