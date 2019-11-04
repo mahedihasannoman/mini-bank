@@ -4,8 +4,7 @@ The MiniBank online system (MBS) is a small bank for personal and small business
 system enables customer to access their bank account and perform their everyday banking needs.
 MBS has many customers, and each customer has one or more accounts. The MBS use the Euro as
 currency. The smallest unit of the currency is the single Euro.
-When customer open an account, they provide an information pack which contain unique email id,
-personal code, and password information for login into the banking system. After that, Customers
+When customer open an account, they provide an information pack which contain unique email id and password information for login into the banking system. After that, Customers
 can view their account information, perform banking operations online, such as displaying the
 balance of an account or transferring money. The customers can also interact with the MBS to
 perform common transactions such as performing withdrawals, deposit and transferring money.
