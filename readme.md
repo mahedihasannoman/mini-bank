@@ -10,11 +10,13 @@ can view their account information, perform banking operations online, such as d
 balance of an account or transferring money. The customers can also interact with the MBS to
 perform common transactions such as performing withdrawals, deposit and transferring money.
 
+## Installation Instruction.
+
 1. Clone the repo.
-2. Install composer
-3. run `composer install` to install all the libraries and dependencies.
-4. Configure database information from app/config/database.php
-5. Browse the parent directory from terminal then type and press `php artisan:migrate` to deploy the database tables.
+2. In terminal run `composer update` to download all the libraries and dependencies.
+3. Rename .env.example to .env and add your database credentials.
+4. Run `php artisan migrate`
+5. Run `php artisan key:generate`
 6. run the server by `php artisan:serve` then go to your browser `http://localhost:8000/register` to create an account.
 7. Then hit `http://localhost:8000/login` to login.
 8. Done ! You've entered the admin area. Now play with the features :)

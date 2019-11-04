@@ -32,11 +32,11 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label><small class="req text-danger">* </small>Amount</label>
+                                                <label><small class="req text-danger">* </small>Amount (€)</label>
                                                 <input type="hidden" name="user_id" value="{{Auth::user()->id}}"
                                                        id="user_id">
-                                                <input class="form-control number" required="" placeholder="Amount"
-                                                       id="amount" name="amount" value="{{old('amount')}}" type="text">
+                                                <input class="form-control number single_euro_digit" required="" placeholder="Amount"
+                                                       id="amount" name="amount" value="{{old('amount')}}" type="number" >
                                                 @if ($errors->has('amount'))
                                                     <span class="help-block">{{ $errors->first('amount') }} <i
                                                             class="fa fa-exclamation"></i></span>

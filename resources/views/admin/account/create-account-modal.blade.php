@@ -25,10 +25,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name" class="col-sm-4 control-label">Opening Balance</label>
+                            <label for="name" class="col-sm-4 control-label">Opening Balance (€)</label>
 
                             <div class="col-sm-8 margin-bottom">
-                                <input name="opening_balance" class="form-control" id="opening_balance"
+                                <input name="opening_balance" class="form-control number single_euro_digit" id="opening_balance"
                                        placeholder="Opening Balance"
                                        type="number" value="{{old('opening_balance')}}">
 
@@ -75,3 +75,4 @@
         </form>
     </div>
 </div>
+

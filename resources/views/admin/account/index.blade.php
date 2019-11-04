@@ -35,7 +35,7 @@
                                 <td>{{$account->id}}</td>
                                 <td>{{$account->name}}</td>
                                 <td>{{$account->account_number}}</td>
-                                <td>{{$account->opening_balance}}</td>
+                                <td>€{{$account->opening_balance}}</td>
                                 <td>{{$account->description}}</td>
                                 <td>
                                     <form class="inline form-delete" method="post"
